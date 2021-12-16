@@ -241,23 +241,23 @@
 
 <script>
     function btnsubmit_click() {
-
         var idnum = $("#IDnumber").val();
-        var fname = $("#fname").val();
-
-        let jsonString = {
-            idnum: "1779900296313",
-            fname: " nu"
-
-        }
-        let person = JSON.parse(jsonString)
+        
+        var data = "{";
+        data += '"idnum":"' + $("#IDnumber").val() + '"';
+        
+        
 
 
-        console.log(person.idnum)
-        console.log(person.fname)
-        $(() => {
-            $("#btnsubmit").click(btnsubmit_click);
-        });
+        data += "}";     
+        console.log(JSON.parse(data));
+
+    }
+    $(() => {
+        $("#btnsubmit").click(btnsubmit_click);
+    });
+
+
 </script>
 
 </html>
